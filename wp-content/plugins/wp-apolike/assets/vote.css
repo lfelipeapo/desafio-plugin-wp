@@ -1,0 +1,267 @@
+/* WP ApoLike - Sistema de Votação Like/Dislike */
+
+.wpld {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+    padding: 16px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.wpld-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Botões de votação */
+.wpld-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.wpld-btn:hover {
+    border-color: #999;
+    background: #f5f5f5;
+}
+
+.wpld-btn:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
+.wpld-btn.is-active {
+    border-color: #0073aa;
+    background: #0073aa;
+    color: #fff;
+}
+
+.wpld-btn.is-active:hover {
+    border-color: #005a87;
+    background: #005a87;
+}
+
+.wpld-icon {
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* Contadores */
+.wpld-like-count,
+.wpld-dislike-count {
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Score */
+.wpld-score {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 12px;
+    padding-left: 12px;
+    border-left: 1px solid #ddd;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.wpld-score-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0073aa;
+}
+
+.wpld-score-label {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Ranking */
+.wpld-ranking {
+    margin: 20px 0;
+    padding: 16px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.wpld-ranking-list {
+    list-style: decimal-leading-zero;
+    margin: 0;
+    padding-left: 24px;
+}
+
+.wpld-ranking-item {
+    margin: 12px 0;
+    padding: 8px 0;
+    line-height: 1.6;
+}
+
+.wpld-ranking-item:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 12px;
+}
+
+.wpld-ranking-title {
+    font-weight: 600;
+    color: #0073aa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.wpld-ranking-title:hover {
+    color: #005a87;
+    text-decoration: underline;
+}
+
+.wpld-ranking-counts {
+    font-size: 13px;
+    color: #666;
+    margin-left: 8px;
+}
+
+.wpld-ranking-counts strong {
+    color: #0073aa;
+    font-weight: 700;
+}
+
+.wpld-ranking-excerpt {
+    margin: 8px 0 0 0;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .wpld {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .wpld-container {
+        width: 100%;
+    }
+
+    .wpld-score {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+        margin-top: 8px;
+    }
+
+    .wpld-btn {
+        padding: 10px 14px;
+        font-size: 16px;
+    }
+
+    .wpld-icon {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wpld {
+        padding: 12px;
+    }
+
+    .wpld-btn {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .wpld-ranking-list {
+        padding-left: 20px;
+    }
+
+    .wpld-ranking-item {
+        margin: 8px 0;
+        padding: 6px 0;
+    }
+
+    .wpld-ranking-item:not(:last-child) {
+        padding-bottom: 8px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .wpld {
+        background: #2a2a2a;
+        border-color: #444;
+    }
+
+    .wpld-btn {
+        background: #333;
+        border-color: #555;
+        color: #e0e0e0;
+    }
+
+    .wpld-btn:hover {
+        background: #444;
+        border-color: #777;
+    }
+
+    .wpld-btn.is-active {
+        border-color: #5ba3d0;
+        background: #5ba3d0;
+        color: #fff;
+    }
+
+    .wpld-score {
+        border-left-color: #555;
+        color: #b0c4de;
+    }
+
+    .wpld-score-value {
+        color: #5ba3d0;
+    }
+
+    .wpld-score-label {
+        color: #999;
+    }
+
+    .wpld-ranking {
+        background: #2a2a2a;
+        border-color: #444;
+    }
+
+    .wpld-ranking-item:not(:last-child) {
+        border-bottom-color: #444;
+    }
+
+    .wpld-ranking-title {
+        color: #5ba3d0;
+    }
+
+    .wpld-ranking-title:hover {
+        color: #7cb3d8;
+    }
+
+    .wpld-ranking-counts {
+        color: #999;
+    }
+
+    .wpld-ranking-counts strong {
+        color: #5ba3d0;
+    }
+
+    .wpld-ranking-excerpt {
+        color: #999;
+    }
+}

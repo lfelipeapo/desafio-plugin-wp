@@ -1,0 +1,12 @@
+{
+  "name": "wp-apolike",
+  "version": "1.0.0",
+  "description": "Sistema completo de votação (Like/Dislike) para WordPress com ranking via Gutenberg",
+  "author": "Luiz Felipe Apolinário",
+  "license": "GPL-2.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luizfelipeapolinario/wp-apolike.git"
+  },
+  "note": "Sem pipeline de build. O bloco Gutenberg usa wp.element.createElement puro (assets/block.js)."
+}

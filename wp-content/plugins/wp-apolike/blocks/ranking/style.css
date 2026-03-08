@@ -1,0 +1,122 @@
+/* WP ApoLike - Bloco Ranking */
+
+.wp-block-wpld-ranking {
+    margin: 20px 0;
+}
+
+.wpld-ranking {
+    margin: 0;
+    padding: 16px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.wpld-ranking p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.wpld-ranking-list {
+    list-style: decimal-leading-zero;
+    margin: 0;
+    padding-left: 24px;
+}
+
+.wpld-ranking-item {
+    margin: 12px 0;
+    padding: 8px 0;
+    line-height: 1.6;
+}
+
+.wpld-ranking-item:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 12px;
+}
+
+.wpld-ranking-title {
+    font-weight: 600;
+    color: #0073aa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.wpld-ranking-title:hover {
+    color: #005a87;
+    text-decoration: underline;
+}
+
+.wpld-ranking-counts {
+    font-size: 13px;
+    color: #666;
+    margin-left: 8px;
+}
+
+.wpld-ranking-counts strong {
+    color: #0073aa;
+    font-weight: 700;
+}
+
+.wpld-ranking-excerpt {
+    margin: 8px 0 0 0;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .wpld-ranking {
+        padding: 12px;
+    }
+
+    .wpld-ranking-list {
+        padding-left: 20px;
+    }
+
+    .wpld-ranking-item {
+        margin: 8px 0;
+        padding: 6px 0;
+    }
+
+    .wpld-ranking-item:not(:last-child) {
+        padding-bottom: 8px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .wpld-ranking {
+        background: #2a2a2a;
+        border-color: #444;
+    }
+
+    .wpld-ranking p {
+        color: #999;
+    }
+
+    .wpld-ranking-item:not(:last-child) {
+        border-bottom-color: #444;
+    }
+
+    .wpld-ranking-title {
+        color: #5ba3d0;
+    }
+
+    .wpld-ranking-title:hover {
+        color: #7cb3d8;
+    }
+
+    .wpld-ranking-counts {
+        color: #999;
+    }
+
+    .wpld-ranking-counts strong {
+        color: #5ba3d0;
+    }
+
+    .wpld-ranking-excerpt {
+        color: #999;
+    }
+}
